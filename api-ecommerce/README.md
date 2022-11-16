@@ -42,9 +42,11 @@
         flask db upgrade
     ```
 * Running API
-    ```bash
-         bash boot.sh
-    ```
+    -   Running app :
+        ```bash
+            bash boot.sh
+        ```
+    - Check your api at url http://127.0.0.1:8082
 
 * Running via Docker
     - create docker image:
