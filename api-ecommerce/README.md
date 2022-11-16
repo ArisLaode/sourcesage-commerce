@@ -21,7 +21,10 @@
     ```bash
         pip install -r requirements.txt
     ```
-* Setup environment flask
+
+* deactive environment via docker in .env file 
+
+* Activate environment via local in .env 
     ```bash
         DB_HOST=localhost
         DB_USERNAME=your-db-username
