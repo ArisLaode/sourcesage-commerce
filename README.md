@@ -30,7 +30,7 @@ This Project about show list all products, create a product, create a variant un
     ```bash
         docker-compose up
     ```
-* Check API app at url http://127.0.0.1:5000
+* Check API app at url http://127.0.0.1:8082
 
 * Check frontend app at url http://127.0.0.1:1112
 
