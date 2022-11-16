@@ -1,4 +1,10 @@
 # Documentation
+* Prequirement:
+    - Python version 3.8.10
+    - Flask version 2.0.1
+    - Docker version 20.10.12
+    - MySQL version 8.0.31
+
 * Create environment
     ```bash
     pip install virtualenv
