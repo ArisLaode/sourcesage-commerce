@@ -11,7 +11,15 @@ This Project about show list all products, create a product, create a variant un
     - MySQL version 8.0.31
 
 # How to use
-* Update environtment api-ecommerce. Change ```api-ecommerce/.env-example``` to ```api-ecommerce/.env```
+* update environtment api-ecommerce. Change ```api-ecommerce/.env-example``` to ```api-ecommerce/.env```
+
+* deactivate environment via local in .env 
+    ```bash
+    # DB_HOST=localhost
+    # DB_USERNAME=your-db-username
+    # DB_PASSWORD=your-db-password
+    # DB_NAME=your-db-name
+    ```
 
 * deactive baseUrl for local environtment in ```../src/utils/Config.js``` :
     ```bash
