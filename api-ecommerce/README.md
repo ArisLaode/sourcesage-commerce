@@ -47,6 +47,14 @@
     ```
 
 * Running via Docker
+* create docker image:
     ```bash
-         
+        docker build --tag api-commerce .
     ```
+
+* create docker container:
+    ```bash
+        docker run -d -p 8083:8080 --name api-commerce-app api-commerce
+    ```
+
+* Check your api at url http://127.0.0.1:8083
