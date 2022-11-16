@@ -23,6 +23,12 @@
     ```
 
 * deactive environment via docker in .env file 
+    ```bash
+    # DB_HOST= "db-sql:3306"
+    # DB_USERNAME= "user"
+    # DB_PASSWORD= "password"
+    # DB_NAME="db"
+    ```
 
 * Activate environment via local in .env 
     ```bash
