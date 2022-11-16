@@ -10,7 +10,8 @@ __pycache__/
 # Ignore env python
 env/
 
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Ignore pyc file
+**/*.pyc
 
 # dependencies
 /node_modules
