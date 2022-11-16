@@ -36,7 +36,7 @@ This Project about show list all products, create a product, create a variant un
 
 * Note : 
     - Check your API app:
-        - import collection api at your Postman. Add ../collection-api/Commerce.postman_collection.json.
+        - import collection api at your Postman. Add ```../collection-api/Commerce.postman_collection.json```
         - if you change your code and you must remove all container deploy: 
             ```bash
                 docker-compose down --volumes --rmi all
