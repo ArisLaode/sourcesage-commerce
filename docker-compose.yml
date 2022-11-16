@@ -1,6 +1,7 @@
 version: '3.3'
 services:
   db-sql:
+    build: ./database
     image: mysql:5.7
     container_name: db
     ports:
@@ -14,7 +15,12 @@ services:
     build: ./api-ecommerce
     container_name: be
     ports:
-      - '5000:5000'
+      - '8082:8082'
+    environment:
+      DB_HOST: 'db-sql:3306'
+      DB_USERNAME: user
+      DB_PASSWORD: password
+      DB_NAME: db
     links:
       - db-sql
   fe:
