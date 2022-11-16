@@ -9,11 +9,15 @@ This Project about show list all products, create a product, create a variant un
         docker-compose up
     ```
 
+* Check frontend app at url http://localhost:1112/
+
 * Note : 
-    if you change your code and you must remove all container deploy: 
-    ```bash
-        docker-compose down --volumes --rmi all
-    ```
+    - Check your API app:
+        - import collection api at your Postman. Add ../collection-api/Commerce.postman_collection.json.
+        - if you change your code and you must remove all container deploy: 
+            ```bash
+                docker-compose down --volumes --rmi all
+            ```
 
 # Contact
 For any problem contact the Engineer.
