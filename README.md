@@ -2,7 +2,7 @@
 This Project about show list all products, create a product, create a variant under a product and view a product and its variants..
 
 # How to use
-* Update environtment api-ecommerce. Change ```.env-example``` to ```.env```
+* Update environtment api-ecommerce. Change ```api-ecommerce/.env-example``` to ```api-ecommerce/.env```
 
 * Running project:
     ```bash
