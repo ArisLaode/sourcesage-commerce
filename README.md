@@ -13,6 +13,11 @@ This Project about show list all products, create a product, create a variant un
 # How to use
 * Update environtment api-ecommerce. Change ```api-ecommerce/.env-example``` to ```api-ecommerce/.env```
 
+* deactive baseUrl for local environtment in ```../src/utils/Config.js``` :
+    ```bash
+    // const baseUrl = "http://127.0.0.1:8082"
+    ```
+
 * Running project:
     ```bash
         docker-compose up
