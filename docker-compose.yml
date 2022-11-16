@@ -1,0 +1,28 @@
+version: '3.3'
+services:
+  db-sql:
+    image: mysql:5.7
+    container_name: db
+    ports:
+      - '3307:3306'
+    environment:
+      MYSQL_DATABASE: db
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+  be:
+    build: ./api-ecommerce
+    container_name: be
+    ports:
+      - '5000:5000'
+    links:
+      - db-sql
+  fe:
+    build: ./fe-ecommerce
+    container_name: fe
+    ports:
+      - '1112:80'
+    links:
+      - be
+volumes:
+  app-data:
