@@ -27,6 +27,3 @@ This Project about show list all products, create a product, create a variant un
             ```bash
                 docker-compose down --volumes --rmi all
             ```
-
-# Contact
-For any problem contact the Engineer.
