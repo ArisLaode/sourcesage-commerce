@@ -25,6 +25,10 @@
 
 * Setup & Migrate Database 
   - create your database. In this project my database name : ecommerce 
+  - export environment flaskk app 
+    ```bash
+        export FLASK_APP=main.py
+    ```
   - create a migration repository
     ```bash
         flask db init
