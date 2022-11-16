@@ -19,7 +19,7 @@ Running project via bash script:
     ```bash
     npm start
     ```
-* Open http://your-ip-address:3000 to check it.
+* Open http://127.0.0.1:3000 to check it.
 
 * Running via Docker:
     - Create docker image:
@@ -31,4 +31,4 @@ Running project via bash script:
         ```bash
             docker run -d -p 3005:3000 --name fe-commerce-app fe-commerce
         ```
-    - Open http://your-ip-address:3005 to check it.
+    - Open http://127.0.0.1:3005 to check it.
