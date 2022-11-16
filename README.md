@@ -9,7 +9,8 @@ This Project about show list all products, create a product, create a variant un
         docker-compose up
     ```
 
-* Note : if you change your code and you must remove all container deploy: 
+* Note : 
+    if you change your code and you must remove all container deploy: 
     ```bash
         docker-compose down --volumes --rmi all
     ```
