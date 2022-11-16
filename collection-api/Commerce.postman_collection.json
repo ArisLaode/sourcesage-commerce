@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "d5ca7950-0cfa-4f76-a9fb-bcd1bb131a03",
+		"name": "Commerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Baju Anak-anak",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Baju  anak-anak adalah brand pakaian anak-anak",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_anak_anak_1.jpg"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_anak_anak.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8082/api/v1/products/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Baju Cowok",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Baju cowok adalah brand pakaian pria",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_cowok_1.jpg"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_cowok.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/products/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8082/api/v1/products/read",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Product by Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/products/read/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"products",
+								"read",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "variant",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "baju cardigan",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "small",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "pink",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_cardigan.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8082/api/v1/variants/create",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"variants",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "baju jeans",
+									"type": "text"
+								},
+								{
+									"key": "size",
+									"value": "medium",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "black",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_jeans.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/variants/update/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"variants",
+								"update",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Variant",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "baju cowok",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "baju cowok adalah product pakaian pria dengan berbagai macam variant terbaik",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_cowok_1.jpg"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_cowok.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/api/v1/variants/read",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"variants",
+								"read"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Variant by product Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "baju cowok",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "baju cowok adalah product pakaian pria dengan berbagai macam variant terbaik",
+									"type": "text"
+								},
+								{
+									"key": "images",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_cowok_1.jpg"
+								},
+								{
+									"key": "logo",
+									"type": "file",
+									"src": "/home/aris/Pictures/commerce/baju_cowok.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8082/api/v1/variants/read/1",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8082",
+							"path": [
+								"api",
+								"v1",
+								"variants",
+								"read",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
