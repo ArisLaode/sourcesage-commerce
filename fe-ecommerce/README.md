@@ -8,6 +8,13 @@ Prequirement:
 
 Running project via bash script:
 
+* deactive baseUrl for docker environtment in ```../src/utils/Config.js``` :
+    ```bash
+    // const baseUrl = "/service"
+    ```
+
+* Activate environment via local in .env 
+
 * Install packages:
 
     ```bash
