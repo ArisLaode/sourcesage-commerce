@@ -1,8 +1,8 @@
-from flask import Blueprint, jsonify, request, abort
+from flask import Blueprint, jsonify, request
 from werkzeug.utils import secure_filename
 from extensions import db, save_images
 from ..models.variant import Variants
-from ..schema.schema import variants_schema, variants_schema_by_id
+from ..schema.schema import variants_schema
 
 bp_variant = Blueprint('bp_variant', __name__)
 
