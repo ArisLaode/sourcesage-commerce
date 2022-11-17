@@ -60,54 +60,14 @@ function ProductDetail () {
                             <Link to={`/read/${item.id}`} state={item.id}> <Meta title={item.name} /></Link>
                           </Card>
                           <br/>
-                          <Space size={88}>
+                          <Space size={20}>
                               <b>Ukuran  : {item.size}</b>
                               <b>Warna : {item.color}</b>
                           </Space>
                       </List.Item>
                     )}
                 />
-                  {/*<List*/}
-                  {/*    grid={{*/}
-                  {/*        gutter: 16,*/}
-                  {/*        column: 4,*/}
-                  {/*      }}*/}
-                  {/*  dataSource={dataVariant}*/}
-                  {/*  renderItem={(item) => (*/}
-                  {/*    <List.Item>*/}
-                  {/*      <Card title={item.name}>*/}
-                  {/*        <Image*/}
-                  {/*            width={200}*/}
-                  {/*            src={'http://127.0.0.1:8082/static/images/'+ item.images}*/}
-                  {/*            preview={false}*/}
-                  {/*        />*/}
-                  {/*          <p>Size  : {item.size}</p>*/}
-                  {/*          <p>Color : {item.color}</p>*/}
-                  {/*      </Card>*/}
-                  {/*    </List.Item>*/}
-                  {/*  )}*/}
-                  {/*/>*/}
-                    {/*<Row gutter={[16, 16]}>*/}
-                    {/*  {dataVariant.map((dataVariant, index) => {*/}
-                    {/*      return (*/}
-                    {/*        <Col key={index} span={8}>*/}
-                    {/*            <p>*/}
-                    {/*              <b>{dataVariant.name}</b>*/}
-                    {/*            </p>*/}
-                    {/*            <p>*/}
-                    {/*              <Image*/}
-                    {/*                width={200}*/}
-                    {/*                src={'http://127.0.0.1:8082/static/images/'+ dataVariant.images}*/}
-                    {/*                preview={false}*/}
-                    {/*              />*/}
-                    {/*            </p>*/}
-                    {/*            <p>*/}
-                    {/*              <b>{dataVariant.size}</b>*/}
-                    {/*              <b>{dataVariant.color}</b>*/}
-                    {/*            </p>*/}
-                    {/*        </Col>*/}
-                    {/*   )})}*/}
-                    {/*</Row>*/}
+
             </Content>
             <FooterApp />
         </Layout>
