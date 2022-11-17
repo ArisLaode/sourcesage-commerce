@@ -35,7 +35,7 @@ function Index() {
                               <Card
                                 hoverable
                                 style={{
-                                  width: 290
+                                    width: 290
                                 }}
                                 cover={<img style={{width: 290, height: 190}}  alt={item.logo_id} src={'http://127.0.0.1:8082/static/images/'+ item.logo_id} />}
                               >
