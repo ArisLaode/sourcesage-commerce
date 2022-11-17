@@ -9,7 +9,7 @@ import {
 import HeaderApp from "../components/Header";
 import FooterApp from "../components/Footer";
 import Rest from "../utils/Rest";
-import {createProduct, readProduct} from "../utils/Config";
+import {createVariant, readProduct} from "../utils/Config";
 import axios from "axios";
 
 const { Option } = Select;
@@ -42,32 +42,25 @@ function AddVariant() {
         });}, []);
     const onFinish = async (values) => {
         console.log('Received values of form: ', values);
-        formData.append("name", "Celana Cewek");
-        formData.append("description", "Celana cewek adalah brand celana cewek");
-        formData.append("images", values.images[0]);
-        formData.append("logo", values.logo[0]);
-        // await Rest.post(createProduct, formData)
-        return await axios.post(createProduct, formData, {
-            headers: {
-                'Accept': '*',
-                'Content-Type': 'multipart/form-data',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': '*',
-            }
-        }).then(response => {
+        formData.append("product_id", values.product_id);
+        formData.append("name", values.name);
+        formData.append("size", values.size);
+        formData.append("color", values.color);
+        formData.append("images", values.images[0].originFileObj);
+
+        await axios.post(createVariant, formData).then(response => {
             console.log(response);
         }).catch(e => {
             console.log(e);
         });
     };
 
-
     return (
         <Layout style={{ minHeight: '95vh' }}>
             <HeaderApp />
             <Content style={{padding: '0 100px', margin: '30px 0 0 0'}}>
                 <p>
-                    <Divider orientation="plain"><h2><b>Tambah Produk</b> </h2></Divider>
+                    <Divider orientation="plain"><h2><b>Tambah Varian</b> </h2></Divider>
                 </p>
                 <Form
                     name="validate_other"
@@ -87,7 +80,7 @@ function AddVariant() {
                         <Input placeholder="Masukan nama varian Anda" />
                     </Form.Item>
                     <Form.Item
-                        name="select"
+                        name="product_id"
                         label="Kategori Produk"
                         hasFeedback
                         rules={[
@@ -155,6 +148,7 @@ function AddVariant() {
                             offset: 8,
                         }}
                     >
+                        {/*<Button type="primary" htmlType="submit" onSubmit={handleFormSubmit}>*/}
                         <Button type="primary" htmlType="submit">
                             Submit
                         </Button>
