@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { UploadOutlined } from '@ant-design/icons';
 import {
     Button,
     Form,
     Upload,
-    Layout, Input, Divider
+    Layout, Input, Divider, notification
 } from 'antd';
 import HeaderApp from "../components/Header";
 import FooterApp from "../components/Footer";
 import Rest from "../utils/Rest";
 import {createProduct} from "../utils/Config";
-import axios from "axios";
+import {useNavigate} from "react-router-dom";
+
 
 const formItemLayout = {
   labelCol: {
@@ -29,28 +30,31 @@ const normFile = (e) => {
 };
 
 const { Content } = Layout;
+const openNotificationWithIcon = (type, message) => {
+    notification[type]({
+        message: `${message}`
+    });
+};
+
 
 function AddProduct() {
 
+    const navigate = useNavigate();
     const formData = new FormData();
 
     const onFinish = async (values) => {
         console.log('Received values of form: ', values);
-        formData.append("name", "Celana Cewek");
-        formData.append("description", "Celana cewek adalah brand celana cewek");
-        formData.append("images", values.images[0]);
-        formData.append("logo", values.logo[0]);
-        // await Rest.post(createProduct, formData)
-        return await axios.post(createProduct, formData, {
-            headers: {
-                'Accept': '*',
-                'Content-Type': 'multipart/form-data',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': '*',
-            }
-        }).then(response => {
+        formData.append("name", values.name);
+        formData.append("description", values.description);
+        formData.append("images", values.images[0].originFileObj);
+        formData.append("logo", values.logo[0].originFileObj);
+
+        await Rest.post(createProduct, formData).then(response => {
             console.log(response);
+            navigate('/')
+            openNotificationWithIcon('success', response.message)
         }).catch(e => {
+            openNotificationWithIcon('error', 'something wrong!')
             console.log(e);
         });
     };
