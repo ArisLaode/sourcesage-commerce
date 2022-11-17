@@ -4,13 +4,14 @@ import {
     Button,
     Form,
     Upload,
-    Layout, Input, Divider, Select
+    Layout, Input, Divider, Select, notification
 } from 'antd';
 import HeaderApp from "../components/Header";
 import FooterApp from "../components/Footer";
 import Rest from "../utils/Rest";
 import {createVariant, readProduct} from "../utils/Config";
 import axios from "axios";
+import { useNavigate } from 'react-router-dom';
 
 const { Option } = Select;
 
@@ -31,9 +32,15 @@ const normFile = (e) => {
 };
 
 const { Content } = Layout;
+const openNotificationWithIcon = (type, message) => {
+    notification[type]({
+        message: `${message}`
+    });
+};
 
 function AddVariant() {
 
+    const navigate = useNavigate();
     const formData = new FormData();
     const [data, setData] = useState([])
     useEffect(() => {
@@ -50,8 +57,11 @@ function AddVariant() {
 
         await axios.post(createVariant, formData).then(response => {
             console.log(response);
+            navigate('/')
+            openNotificationWithIcon('success', response.data.message)
         }).catch(e => {
             console.log(e);
+            openNotificationWithIcon('error', 'something wrong!')
         });
     };
 
